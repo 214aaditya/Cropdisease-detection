@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .hero-section {
+    /* REMOVE this old background line */
+    /* background: linear-gradient(rgba(0, 128, 0, 0.6), rgba(0, 128, 0, 0.6)), url('../images/leaf-bg.jpg') no-repeat center center; */
+    background: rgba(62, 91, 62, 0)
+    ; /* or just use transparent */
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  
+  .hero-content {
+    max-width: 600px;
+    padding: 2rem;
+  }
+  .hero-content .btn-primary
+  {
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    color: #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px); /* Optional: glassy effect */
+    border-radius: 8px; /* Optional: rounded corners */
+  }
+  .hero-content .btn-primary:hover
+  {
+    background: rgba(255, 255, 255, 0.09);
+    color: #000; /* Text color on hover */ 
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .upload-form .form-control {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .result-section {
+    padding: 2rem 0;
+  }
+  
+  .result-box {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .result-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .result-info h3 {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .footer {
+    background-color: #e9ecef;
+  }
+  
+  /* Full page background image with blur that covers everything including navbar */
+#background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vw;
+  width: 100vw;
+  background: url('/static/images/bgmain.webp') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(6px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+
+  

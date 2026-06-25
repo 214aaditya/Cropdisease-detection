@@ -1,0 +1,208 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hero-section {
+  /* REMOVE this old background line */
+  /* background: linear-gradient(rgba(0, 128, 0, 0.6), rgba(0, 128, 0, 0.6)), url('../images/leaf-bg.jpg') no-repeat center center; */
+  background: rgba(62, 91, 62, 0)
+  ; /* or just use transparent */
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+
+.hero-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+.hero-content .btn-primary
+{
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px); /* Optional: glassy effect */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+.hero-content .btn-primary:hover
+{
+  background: rgba(255, 255, 255, 0.09);
+  color: #000; /* Text color on hover */ 
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.upload-form .form-control {
+  max-width: 400px;
+  margin: auto;
+}
+
+.result-section {
+  padding: 2rem 0;
+}
+
+.result-box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.result-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.result-info h3 {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #e9ecef;
+}
+
+/* Full page background image with blur that covers everything including navbar */
+#background-blur {
+position: fixed;
+top: 0;
+left: 0;
+height: 100vw;
+width: 100vw;
+background: url('/static/images/bgmain.webp') no-repeat center center fixed;
+background-size: cover;
+filter: blur(6px);
+opacity: 0.8;
+z-index: -1;
+}
+
+section.container {
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  transition: box-shadow 0.3s ease;
+  animation: fadeInSection 1.8s ease-out;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(10px);
+}
+/*----------------------------------------------------------------------
+*/
+/* About Section Styling */
+section.container {
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  transition: box-shadow 0.3s ease;
+  animation: fadeInSection 1.8s ease-out;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+h1.text-center {
+  color: #28a745;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Paragraphs */
+p.text-justify {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInParagraph 4s ease-out forwards;
+}
+
+@keyframes fadeInParagraph {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer.footer {
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  font-size: 1rem;
+  animation: fadeInFooter 2s ease-out;
+}
+
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1.text-center {
+    font-size: 2rem;
+  }
+
+  p.text-justify {
+    font-size: 1rem;
+  }
+}
+

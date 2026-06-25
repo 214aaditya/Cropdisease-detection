@@ -1,0 +1,65 @@
+/* Ensure the body takes full screen height and sets a background image */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/bgmain.webp') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  /* Styling for the navbar, if needed */
+  .navbar {
+    background-color: rgba(40, 167, 69, 0.85); /* Semi-transparent green for navbar */
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  /* Card styling for login form */
+  .card {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight opacity to match blur effect */
+  }
+  
+  /* Text styling for the heading */
+  h3.text-center {
+    font-size: 1.8rem;
+    color: #28a745; /* Green color for login heading */
+    margin-bottom: 20px;
+  }
+  
+  /* Form field styling */
+  input.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  button.btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Adjusting the link and adding hover effects */
+  a {
+    color: #28a745;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer and bottom section styling if needed */
+  footer {
+    background-color: #e9ecef;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  
