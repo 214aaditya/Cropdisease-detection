@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plant Disease Recognition</title>
+  <link rel="icon" href="/static/images/image2.png" />
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+    <div id="background-blur"></div>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/static/images/image2.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top rounded-circle">
+        PHASAL
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="userlogin.html">User Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content">
+      <h1>Plant Disease Recognition</h1>
+      <p>Upload a leaf image to detect potential plant diseases and get a cure suggestion.</p>
+      <form action="/" method="POST" enctype="multipart/form-data" class="upload-form">
+        <input type="file" name="img" accept="image/png, image/jpeg" required class="form-control my-3">
+        <button type="submit" class="btn btn-primary">Upload Image</button>
+      </form>
+    </div>
+  </section>
+
+  {% if result %}
+  <section class="result-section">
+    <div class="container text-center">
+      <div class="result-box shadow">
+        <div class="result-info mt-3">
+          <h3>Prediction : {{ prediction }}</h3>
+          <img src="{{imagepath}}" alt="Leaf Image" class="result-img rounded" style="max-width: 360px; border-radius: 10px;">
+          <p><strong>Cause:</strong> {{ cause }}</p>
+          <p><strong>Cure:</strong> {{ cure }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <footer class="footer text-center py-3 bg-light mt-5">
+    <small>&copy; 2025 PHASAL | Smart Farming Solutions</small>
+  </footer>
+
+  <script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
